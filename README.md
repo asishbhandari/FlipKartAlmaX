@@ -5,8 +5,8 @@ Welcome to the frontend repository of our Flipkart App! This React-based fronten
 ## `Features` ##
 `Browse products:` Explore a vast variety of products.  
 `Search Functionality:` Easily search for specific product using the search feature.   
-`WisList:` Save your favorite products for later viewing. 
-`Cart:` Add to cart Functionality to prooced to buy.
+`WisList:` Save your favorite products for later viewing.  
+`Cart:` Add to cart Functionality to prooced to buy.  
 `Responsive Design:` Enjoy a seamless experience across desktop, tablet, and mobile devices.  
 
 ### `Technologies Used` ###
