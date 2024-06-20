@@ -109,20 +109,20 @@ const SignUpPage = () => {
     <div className="flex flex-col min-h-screen">
       <TopCategory />
       {page === "signUp" ? (
-        <div className="md:w-[60%] mx-auto flex h-[calc(100vw/2.2)] lg:h-[480px] mt-4">
-          <div className="bg-fBlue flex flex-col w-[40%] p-6 gap-4">
+        <div className="md:w-[60%] mx-auto gap-4 md:gap-0 flex flex-col md:flex-row h-[calc(100vw/2.2)] lg:h-[480px] mt-4">
+          <div className="bg-fBlue flex flex-col w-full md:w-[40%] p-6 gap-4">
             <span className="text-white font-medium text-3xl">
               {`Looks like you're new here!`}
             </span>
-            <span className="text-gray-300 text-xl">
+            <span className="text-gray-300 text-[1em]">
               Sign up with your Email to get started
             </span>
             <span className="grow"></span>
-            <div className="w-full">
+            <div className="w-full hidden md:block">
               <img src={FLogin} alt="login" className="object-contain" />
             </div>
           </div>
-          <div className="w-[60%] flex flex-col bg-white p-10 gap-6">
+          <div className="w-full md: md:w-[60%] flex flex-col bg-white p-10 gap-6">
             {/* <form className="flex flex-col bg-white p-10 gap-6"> */}
             <div className="flex flex-col gap-6">
               <label className="w-full relative ">
@@ -200,18 +200,18 @@ const SignUpPage = () => {
           </div>
         </div>
       ) : (
-        <div className="md:w-[60%] mx-auto flex h-[calc(100vw/2.2)] lg:h-[480px] mt-4">
-          <div className="bg-fBlue flex flex-col w-[40%] p-6 gap-4">
+        <div className="md:w-[60%] mx-auto gap-4 md:gap-0 flex flex-col md:flex-row h-[calc(100vw/2.2)] lg:h-[480px] mt-4">
+          <div className="bg-fBlue flex flex-col w-full md:w-[40%] p-6 gap-4">
             <span className="text-white font-medium text-3xl">Login</span>
             <span className="text-gray-300 text-xl">
               Get access to your Orders, Wishlist and Recommendations
             </span>
             <span className="grow"></span>
-            <div className="w-full">
+            <div className="w-full hidden md:block">
               <img src={FLogin} alt="login" className="object-contain" />
             </div>
           </div>
-          <div className="w-[60%] flex flex-col bg-white p-10 gap-6">
+          <div className="w-full md:w-[60%] flex flex-col bg-white p-10 gap-6">
             <div className="flex flex-col gap-4">
               <label className="w-full relative ">
                 <input

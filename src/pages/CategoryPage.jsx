@@ -51,16 +51,15 @@ const CategoryPage = () => {
     <div className="flex flex-col min-h-screen">
       <TopCategory selectedCategory={selectedCategory} />
 
-      {/* <div className="flex w-[98%] mx-auto gap-4 mt-4"> */}
       <div
         className={`lg:hidden cursor-pointer hover:bg-gray-100 p-2 rounded z-10 `}
         onClick={toggleFilter}
       >
         <CgMoreR size={25} className="bg-white text-gray-500" />
       </div>
+
       <div className="grid grid-cols-12 gap-4 lg:mt-4 w-[98%] mx-auto">
         {/* left section - filter */}
-        {/* <div className="w-[20%] bg-white flex flex-col"> */}
         <div
           className={`col-span-2 bg-white rounded shadow-md lg:flex lg:flex-col overflow-auto transition-all duration-300 ease-in-out z-40 ${
             isFilterSectionVisible
@@ -93,7 +92,6 @@ const CategoryPage = () => {
         )}
 
         {/* Right Section */}
-        {/* <div className="w-[80%] bg-white"> */}
         <div className="lg:col-span-10 col-span-12 bg-white rounded shadow-md">
           {/* category description */}
           <div className="p-2 text-gray-500 text-sm">
