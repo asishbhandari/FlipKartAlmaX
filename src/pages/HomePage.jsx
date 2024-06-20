@@ -30,7 +30,7 @@ const HomePage = () => {
     fetchData();
   }, [dispatch]);
   return (
-    <div className="w-[98%] mx-auto flex lg:flex-col">
+    <div className="w-[98%] mx-auto flex flex-col">
       <div className="bg-white mt-2 h-[100px] md:h-[200px] ">
         <div className="w-[90%] md:w-[60%] mx-auto h-full flex justify-between overflow-x-scroll sm:overflow-x-hidden">
           {categoryContent?.map((item, i) => (
