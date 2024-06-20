@@ -74,7 +74,7 @@ const Navbar = ({ isHome }) => {
           />
         </div>
         <span className="grow md:hidden"></span>
-        <SearchBox />
+        <SearchBox isHome={isHome} />
         <div
           className={`flex items-center gap-1 rounded-lg font-semibold ${
             isHome

@@ -2,8 +2,9 @@
 import { useState } from "react";
 import { IoCloseCircle, IoSearchOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
-const SearchBox = () => {
+const SearchBox = ({ isHome }) => {
   const [searchTerm, SetSearchTerm] = useState("");
   const navigate = useNavigate();
   const [submit, setSubmit] = useState(false);
@@ -40,7 +41,7 @@ const SearchBox = () => {
       <IoSearchOutline
         size={25}
         onClick={handleOpenSearchOnSmallDevices}
-        className=" md:hidden text-white"
+        className={`md:hidden ${isHome ? "text-black" : "text-white"}`}
       />
       {submit && (
         <div className="fixed top-0 left-0 w-[100%] h-[100vh] overflow-auto bg-gray-500 bg-opacity-50 z-50">
@@ -64,5 +65,7 @@ const SearchBox = () => {
     </>
   );
 };
-
+SearchBox.propTypes = {
+  isHome: PropTypes.bool,
+};
 export default SearchBox;
