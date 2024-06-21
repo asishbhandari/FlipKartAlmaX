@@ -131,7 +131,7 @@ const SearchPage = () => {
           {/* Product display section */}
           <div className="w-full">
             {isSearchProduct ? (
-              filteredProducts.map((item, i) => (
+              filteredProducts?.map((item, i) => (
                 <ProductCard
                   item={item}
                   key={i}
@@ -147,7 +147,7 @@ const SearchPage = () => {
                   <span className="text-lg font-semibold">
                     Our Recommendation
                   </span>
-                  {products.slice(2, 8).map((item, i) => (
+                  {products?.slice(2, 8)?.map((item, i) => (
                     <ProductCard
                       key={i * 2 * item.id}
                       item={item}

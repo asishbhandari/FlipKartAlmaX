@@ -22,7 +22,7 @@ const CartPage = () => {
   const wish = useSelector((state) => state?.user?.wishList);
   const dispatch = useDispatch();
   const [submit, setSubmit] = useState(false);
-  let noOfItem = cartList.map((pro) => pro?.noOfItem);
+  let noOfItem = cartList?.map((pro) => pro?.noOfItem);
 
   const calculateDiscount = (num) => {
     return Math.round(num?.price * 97 * (1 - num?.discount / 100));

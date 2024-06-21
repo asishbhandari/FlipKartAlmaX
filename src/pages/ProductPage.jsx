@@ -83,7 +83,7 @@ const ProductPage = () => {
   }, [wishList, product]);
 
   useEffect(() => {
-    setProduct({ ...data.filter((item) => item.id === parseInt(id))[0] });
+    setProduct({ ...data?.filter((item) => item.id === parseInt(id))[0] });
   }, [id, data]);
 
   return (
@@ -189,7 +189,7 @@ const ProductPage = () => {
           {/* offers */}
           <div className="mt-[10px] flex flex-col gap-2">
             <span>Available offers</span>
-            {offersList.map((offer, i) => (
+            {offersList?.map((offer, i) => (
               <div key={i}>
                 <span className="flex items-center gap-2">
                   <FaTag className="text-fGreen min-w-6" />

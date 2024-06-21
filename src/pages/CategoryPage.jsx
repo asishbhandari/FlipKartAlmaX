@@ -115,10 +115,10 @@ const CategoryPage = () => {
           <div className="w-full">
             {filteredProducts || filteredProducts.length !== 0 ? (
               filteredProducts
-                .filter(
+                ?.filter(
                   (item) => item?.category === selectedCategory?.toLowerCase()
                 )
-                .map((item, i) => (
+                ?.map((item, i) => (
                   <ProductCard
                     item={item}
                     key={`${i} ${item.title}`}

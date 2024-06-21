@@ -59,11 +59,11 @@ const HomePage = () => {
           <span className="text-2xl font-bold">{categoryContent[0]?.name}</span>
           <div className="grid grid-cols-2 mt-2 ">
             {data
-              .filter(
+              ?.filter(
                 (a) => a.category === categoryContent[0]?.name.toLowerCase()
               )
-              .slice(0, 4)
-              .map((item, i) => {
+              ?.slice(0, 4)
+              ?.map((item, i) => {
                 if (item)
                   return (
                     <div
@@ -86,11 +86,11 @@ const HomePage = () => {
           <span className="text-2xl font-bold">{categoryContent[1]?.name}</span>
           <div className="grid grid-cols-2 mt-2">
             {data
-              .filter(
+              ?.filter(
                 (a) => a.category === categoryContent[1]?.name.toLowerCase()
               )
-              .slice(0, 4)
-              .map((item, i) => {
+              ?.slice(0, 4)
+              ?.map((item, i) => {
                 if (item)
                   return (
                     <div
@@ -113,11 +113,11 @@ const HomePage = () => {
           <span className="text-2xl font-bold">{categoryContent[2]?.name}</span>
           <div className="grid grid-cols-2 mt-2">
             {data
-              .filter(
+              ?.filter(
                 (a) => a.category === categoryContent[2]?.name.toLowerCase()
               )
-              .slice(0, 4)
-              .map((item, i) => {
+              ?.slice(0, 4)
+              ?.map((item, i) => {
                 if (item)
                   return (
                     <div
@@ -140,11 +140,11 @@ const HomePage = () => {
           <span className="text-2xl font-bold">{categoryContent[3]?.name}</span>
           <div className="grid grid-cols-2 mt-2">
             {data
-              .filter(
+              ?.filter(
                 (a) => a.category === categoryContent[3]?.name.toLowerCase()
               )
-              .slice(0, 4)
-              .map((item, i) => {
+              ?.slice(0, 4)
+              ?.map((item, i) => {
                 if (item)
                   return (
                     <div
