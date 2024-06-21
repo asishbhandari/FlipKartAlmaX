@@ -106,7 +106,46 @@ const CartPage = () => {
 
   return (
     <div className="w-[80%] mx-auto grid grid-cols-12 mt-2 gap-2">
-      <div className="col-span-8 ">
+      <div className="lg:hidden col-span-12 ">
+        <div className="bg-white px-6 py-4 flex flex-col gap-4">
+          <span className="font-medium text-lg  ">Price Detail</span>
+          <span className="border border-gray-200 h-0 mt-2"></span>
+          <span className="flex justify-between">
+            <span className="">{`Price (${cartList?.length} items)`}</span>
+            <span>{`₹${calculateTotalPrice()?.totalPrice}`}</span>
+          </span>
+          <span className="flex justify-between">
+            <span className="">{`Discount`}</span>
+            <span className="text-fGreen">{`-₹${
+              calculateTotalPrice()?.totalDiscount
+            }`}</span>
+          </span>
+          <span className="flex justify-between">
+            <span className="">{`Delivery charges`}</span>
+            <span className="text-fGreen flex gap-2">
+              <span className="line-through text-gray-400">{`₹80`}</span>Free
+            </span>
+          </span>
+          <span className="border border-gray-200 h-0 mt-2"></span>
+          <span className="flex justify-between font-semibold">
+            <span className="">{`Total Amount`}</span>
+            <span className="">{`₹${
+              calculateTotalPrice()?.discountedPriceSum
+            }`}</span>
+          </span>
+          <span className="border border-gray-200 h-0 mt-2"></span>
+          <span className="text-fGreen font-medium">{`You will save ₹${
+            calculateTotalPrice()?.totalDiscount
+          } on this order`}</span>
+        </div>
+        <div className="flex text-gray-500 px-6 py-4 gap-2">
+          <AiFillSafetyCertificate size={40} />
+          <span>
+            Safe and Secure Payments.Easy returns.100% Authentic products.
+          </span>
+        </div>
+      </div>
+      <div className="col-span-12 lg:col-span-8 ">
         <div className=" border bg-white shadow-md border-gray-300 flex flex-col">
           <span className="font-medium text-lg px-6 pt-4">Cart Items</span>
           <span className="border border-gray-200 h-0 mt-2"></span>
@@ -160,7 +199,7 @@ const CartPage = () => {
           ))}
         </div>
       </div>
-      <div className="col-span-4 ">
+      <div className="hidden lg:block lg:col-span-4 ">
         <div className="bg-white px-6 py-4 flex flex-col gap-4">
           <span className="font-medium text-lg  ">Price Detail</span>
           <span className="border border-gray-200 h-0 mt-2"></span>
