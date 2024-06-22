@@ -32,7 +32,7 @@ const CategoryPage = () => {
 
   // discount function to calculate discount
   const calculateDiscount = (num) => {
-    return Math.round(num?.price * 97 * (1 - num?.discount / 100));
+    return Math.floor(num?.price * 97 * (1 - num?.discount / 100));
   };
 
   useEffect(() => {

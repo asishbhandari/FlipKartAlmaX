@@ -65,7 +65,9 @@ const CartProduct = ({
           </div>
         )}
       </div>
-      <div className="px-2 md:px-6 flex gap-2">
+      <div
+        className={`px-2 md:px-6 flex gap-2 ${type === "wish" ? "pb-2" : ""}`}
+      >
         <div className="w-[20%] ">
           <div className="flex gap-[4%] justify-center ">
             <span

@@ -191,7 +191,7 @@ const SignUpPage = () => {
               CONTINUE
             </button>
             <button
-              className="w-full bg-white text-fBlue font-medium text-lg h-10 border-x-2 border-b-2 shadow-md rounded-sm"
+              className="w-full bg-white text-fBlue font-medium text-sm md:text-lg h-10 border-x-2 border-b-2 shadow-md rounded-sm"
               onClick={() => setPage("login")}
             >
               Existing User? Log in
@@ -262,7 +262,7 @@ const SignUpPage = () => {
               CONTINUE
             </button>
             <button
-              className="w-full bg-white text-fBlue font-medium text-lg h-10 border-x-2 border-b-2 shadow-md rounded-sm"
+              className="w-full bg-white text-fBlue font-medium text-sm md:text-lg h-10 border-x-2 border-b-2 shadow-md rounded-sm"
               onClick={() => setPage("signUp")}
             >
               New to Flipkart? Create an account

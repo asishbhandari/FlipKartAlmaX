@@ -84,8 +84,9 @@ const ProductCard = ({ item, calculateDiscount }) => {
           </div>
           <div className="md:col-span-2 col-span-5 flex flex-col justify-center md:justify-start">
             <span className="flex md:justify-between items-center">
-              <span className="text-xl font-bold">{`₹ 
-        ${calculateDiscount(item)}
+              <span className="text-sm md:text-xl font-bold pr-2">{`₹${calculateDiscount(
+                item
+              )}
         `}</span>
               {item?.isFAssured && (
                 <img
@@ -96,12 +97,12 @@ const ProductCard = ({ item, calculateDiscount }) => {
               )}
             </span>
             <span className="flex gap-2">
-              <span className="text-base line-through text-gray-400">{`₹ ${
+              <span className="text-sm md:text-base line-through text-gray-400">{`₹ ${Math.floor(
                 item?.price * 97
-              }`}</span>
-              <span className="text-fGreen font-semibold">{`${item?.discount} % off`}</span>
+              )}`}</span>
+              <span className="text-fGreen text-sm md:text-base font-semibold">{`${item?.discount}% off`}</span>
             </span>
-            <span>free delivery</span>
+            <span className="text-sm md:text-base">free delivery</span>
           </div>
 
           {/* visible below md screen */}

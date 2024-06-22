@@ -25,7 +25,7 @@ const CartPage = () => {
   let noOfItem = cartList?.map((pro) => pro?.noOfItem);
 
   const calculateDiscount = (num) => {
-    return Math.round(num?.price * 97 * (1 - num?.discount / 100));
+    return Math.floor(num?.price * 97 * (1 - num?.discount / 100));
   };
 
   const handleSaveForLater = (item) => {

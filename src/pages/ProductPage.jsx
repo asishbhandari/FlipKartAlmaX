@@ -29,7 +29,7 @@ const ProductPage = () => {
   const cartList = useSelector((state) => state?.user?.cartItems);
 
   const calculateDiscount = (num) => {
-    return Math.round(num?.price * 97 * (1 - num?.discount / 100));
+    return Math.floor(num?.price * 97 * (1 - num?.discount / 100));
   };
 
   const token = localStorage.getItem("token");
@@ -92,11 +92,11 @@ const ProductPage = () => {
       <div className="flex flex-col md:flex-row w-[90%] bg-white mx-auto md:h-[90vh] p-4 gap-4 mt-2">
         {/*  */}
         <div className=" flex flex-col max-w-[500px] max-h-[500px] mx-auto relative">
-          <div className="h-[80%] mb-4 w-full px-14 py-4 mx-auto border border-gray-400 ">
+          <div className="h-[60%] mb-4 w-full px-14 py-4 mx-auto border border-gray-400 overflow-hidden">
             <img
               src={product?.image}
               alt={product?.title}
-              className="w-full h-full lg:max-w-[352px] lg:max-h-[352px] my-auto  object-contain"
+              className="w-[100%] h-auto lg:max-w-[352px] lg:max-h-[352px] object-contain"
             />
           </div>
           <span className="absolute top-4 right-4">
@@ -114,7 +114,7 @@ const ProductPage = () => {
             {isAdded ? (
               <button
                 onClick={() => navigate("/cartPage")}
-                className={`w-[49%] bg-[#FF9F00] text-white flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base lg:text-lg font-semibold py-4 rounded-sm `}
+                className={`w-[49%] bg-[#FF9F00] text-white flex items-center justify-center gap-2 text-xs md:text-sm lg:text-lg font-semibold py-4 rounded-sm `}
               >
                 <IoCart />
                 Go TO CART
@@ -122,7 +122,7 @@ const ProductPage = () => {
             ) : (
               <button
                 onClick={handleAddToCart}
-                className={`w-[49%] bg-[#FF9F00] text-white flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base lg:text-lg font-semibold py-4 rounded-sm `}
+                className={`w-[49%] bg-[#FF9F00] text-white flex items-center justify-center gap-2 text-xs  md:text-sm lg:text-lg font-semibold py-4 rounded-sm `}
               >
                 <IoCart />
                 ADD TO CART
@@ -130,13 +130,14 @@ const ProductPage = () => {
             )}
             <button
               onClick={handleBuy}
-              className="w-[49%] bg-[#FB641B]  text-white flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base lg:text-lg font-semibold py-4 rounded-sm"
+              className="w-[49%] bg-[#FB641B]  text-white flex items-center justify-center gap-2 text-xs md:text-sm lg:text-lg font-semibold py-4 rounded-sm"
             >
               <FaBolt />
               Buy Now
             </button>
           </div>
         </div>
+
         <div className="md:w-[65%] md:h-[80%] w-full mx-auto md:overflow-y-scroll flex flex-col gap-2">
           {/* top category hierarchy */}
           <div className=" text-gray-500 text-base line-clamp-1">
@@ -157,9 +158,11 @@ const ProductPage = () => {
 
           {/*  */}
           <div className="mt-[10px] flex flex-col gap-2">
-            <h2 className="text-2xl line-clamp-1">{product?.title}</h2>
-            <span className="flex gap-2 text-lg items-center">
-              <span className="bg-fGreen text-white font-semibold flex justify-center items-center gap-1 w-[60px] rounded-sm px-1 ">
+            <h2 className="text-base sm:text-xl md:text-2xl line-clamp-1">
+              {product?.title}
+            </h2>
+            <span className="flex gap-2 text-xs sm:text-sm md:text-lg items-center">
+              <span className="bg-fGreen text-white font-semibold flex justify-center items-center gap-1 w-[40px] md:w-[60px] rounded-sm px-1 ">
                 {product?.rating?.rate} <TiStarFullOutline />
               </span>
               <span>{`${product?.rating?.count} Ratings`}</span>
@@ -171,17 +174,17 @@ const ProductPage = () => {
 
           {/* Price  */}
           <div className="mt-[10px] flex flex-col text-lg gap-2">
-            <span className="text-fGreen text-xl font-semibold">
+            <span className="text-fGreen text-base md:text-xl font-semibold">
               Extra ₹2100 Off
             </span>
             <span className="flex gap-2 items-center">
-              <span className="text-3xl font-semibold">{`₹${calculateDiscount(
+              <span className="text-lg md:text-3xl font-semibold">{`₹${calculateDiscount(
                 product
               )}`}</span>
-              <span className=" line-through text-gray-400">{`₹ ${
+              <span className=" line-through text-base md:text-2xl text-gray-400">{`₹ ${Math.floor(
                 product?.price * 97
-              }`}</span>
-              <span className="text-fGreen  font-semibold">{`${product?.discount}% off`}</span>
+              )}`}</span>
+              <span className="text-fGreen text-base md:text-2xl font-semibold">{`${product?.discount}% off`}</span>
             </span>
             <span>free delivery</span>
           </div>

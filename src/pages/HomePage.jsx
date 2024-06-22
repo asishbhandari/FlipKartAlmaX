@@ -96,7 +96,7 @@ const HomePage = () => {
                     <div
                       key={i}
                       className="w-full h-[400px] border border-gray-200 py-2 cursor-pointer "
-                      // onClick={} // onclick should navigate to product page
+                      onClick={() => navigate(`/product/${item?.id}`)}
                     >
                       <img
                         src={item?.image}
@@ -123,7 +123,7 @@ const HomePage = () => {
                     <div
                       key={i}
                       className="w-full h-[400px] border border-gray-200 py-2 cursor-pointer "
-                      // onClick={} // onclick should navigate to product page
+                      onClick={() => navigate(`/product/${item?.id}`)}
                     >
                       <img
                         src={item?.image}
@@ -150,7 +150,7 @@ const HomePage = () => {
                     <div
                       key={i}
                       className="w-full h-[400px] border border-gray-200 py-2 cursor-pointer "
-                      // onClick={} // onclick should navigate to product page
+                      onClick={() => navigate(`/product/${item?.id}`)}
                     >
                       <img
                         src={item?.image}
