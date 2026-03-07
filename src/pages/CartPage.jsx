@@ -47,6 +47,7 @@ const CartPage = () => {
     }
   };
 
+  console.log("cartList: ",cartList)
   const handleAddToCart = (item) => {
     let isAdded = cartList.some((pro) => pro?.id === item?.id);
     dispatch(removeFromWishList(item));
